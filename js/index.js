@@ -42,7 +42,8 @@ function voteUp(id)
             {
                 throw new Error('Request return status code !== 200: ' + response.status + ' - ')
             }
-        });
+        })
+        loadRandomImage();
 }
 
 function voteDown(id)
@@ -58,6 +59,7 @@ function voteDown(id)
                 throw new Error('Request return status code !== 200: ' + response.status + ' - ')
             }
         });
+        loadRandomImage();
 }
 
 $(function () {
