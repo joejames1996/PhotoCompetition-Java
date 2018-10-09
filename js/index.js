@@ -23,6 +23,7 @@ function loadRandomImage() {
 
             $('#picAuthor').html(json.author);
             $('#picName').html(json.name);
+            $('#picScore').html(json.score);
             $('#picLicense').html(json.license);
         })
         .catch(function (err) {

@@ -18,3 +18,8 @@ function buildVoteDown(id)
 {
 	return buildUrl('/id/' + id + '/vote/down');
 }
+
+function buildTopRatedUrl()
+{
+	return 'http://' + backendIp + '/images/top?token=' + token;
+}
