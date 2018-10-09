@@ -10,8 +10,37 @@
   padding: 8px;
 
   .voting-button {
+  	border: 2px solid #666;
+  	border-radius: 2em;
     padding: 8px;
     margin: 0 8px;
+    color: white;
+  }
+
+  .vote-up
+  {
+  	background-color: mediumseagreen;
+  	&:hover
+  	{
+  	  background-color: lighten(mediumseagreen, 25%);
+  	}
+  	&:active
+  	{
+  	  background-color: lighten(mediumseagreen, 5%);
+  	}
+  }
+
+  .vote-down
+  {
+  	background-color: indianred;
+  	&:hover
+  	{
+  	  background-color: lighten(indianred, 25%);
+  	}
+  	&:active
+  	{
+  	  background-color: lighten(indianred, 5%);
+  	}
   }
 }
 

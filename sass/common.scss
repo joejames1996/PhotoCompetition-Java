@@ -2,9 +2,13 @@
 @import 'index';
 @import 'navbar';
 
+@import url('https://fonts.googleapis.com/css?family=Basic|Dosis');
+
 // Global styling
 
 body {
+  font-family: 'Basic', 'Dosis', sans-serif;
+  background-color: #F0FFF0;
   margin: 0;
 }
 

@@ -24,7 +24,7 @@
 <body>
 
 <!-- Navigation bar -->
-<nav class="navbar main-content">
+<nav class="navbar">
     <ul class="navbar-list">
         <li class="navbar-item"><a class="navbar-title" href="index.html">Photo Competition</a></li>
         <li class="navbar-item"><a class="navbar-link" href="about.html">About</a></li>
@@ -41,23 +41,23 @@
     </div>
 
     <div class="voting-buttons">
-        <button class="voting-button vote-up">I love it</button>
-        <button class="voting-button vote-down">I hate it</button>
+        <button id="voteUp" class="voting-button vote-up">hey that's pretty good</button>
+        <button id="voteDown" class="voting-button vote-down">I hate it</button>
     </div>
 
     <table class="image-details">
         <tbody>
             <tr>
                 <td><b>Author</b></td>
-                <td>TODO: Fill in author details.</td>
+                <td id="picAuthor"></td>
             </tr>
             <tr>
                 <td><b>Name</b></td>
-                <td>TODO: Fill in image details.</td>
+                <td id="picName"></td>
             </tr>
             <tr>
                 <td><b>Licence</b></td>
-                <td>TODO: Fill in licence details.</td>
+                <td id="picLicense"></td>
             </tr>
         </tbody>
     </table>
