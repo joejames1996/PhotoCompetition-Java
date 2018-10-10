@@ -8,7 +8,7 @@
     <meta name="author" content="Softwire">
 
     <!-- Title -->
-    <title>Photo Competition - Top Rated Photo</title>
+    <title>Photo Competition - Home</title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheets/common.css">
@@ -18,13 +18,15 @@
 
     <!-- Custom JS -->
     <script src="../js/common.js"></script>
-    <script src="../js/toprated.js"></script>
+    <script src="../js/upload.js"></script>
 
     <!-- No Javascript enabled -->
     <noscript>
         <link rel="stylesheet" href="../stylesheets/noscript.css">
     </noscript>
 </head>
+
+<body>
 
 <!-- Navigation bar -->
 <nav class="navbar">
@@ -41,31 +43,14 @@
     <h1 class="page-title">Photo Competition</h1>
     <h1 class="noscript" style="display: none">You must enable JavaScript to use this.</h1>
 
-    <div class="image-container">
-        <!-- src and alt attribute will be populated by index.js on page load -->
-        <img id="main-image" src="">
-    </div>
-
-    <table class="image-details">
-        <tbody>
-            <tr>
-                <td><b>Author</b></td>
-                <td id="picAuthor"></td>
-            </tr>
-            <tr>
-                <td><b>Name</b></td>
-                <td id="picName"></td>
-            </tr>
-            <tr>
-                <td><b>Score</b></td>
-                <td id="picScore"></td>
-            </tr>
-            <tr>
-                <td><b>Licence</b></td>
-                <td id="picLicense"></td>
-            </tr>
-        </tbody>
-    </table>
+    <form id="uploadImage" method="post" enctype="multipart/form-data">
+        <label>Upload File: </label><input type="file" class="uploadInput" name="uploadFile" accept="image/x-png,image/jpeg">
+        <label>Photo Name: </label><input type="text" class="uploadInput" name="uploadName">
+        <label>Author: </label><input type="text" class="uploadInput" name="uploadAuthor">
+        <label>License: </label><input type="text" class="uploadInput" name="uploadLicense">
+        <input type="submit" class="uploadInput" value="Upload">
+    </form>
+    
 </div>
 
 </body>
