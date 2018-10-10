@@ -19,6 +19,11 @@
     <!-- Custom JS -->
     <script src="../js/common.js"></script>
     <script src="../js/index.js"></script>
+
+    <!-- No Javascript enabled -->
+    <noscript>
+        <link rel="stylesheet" href="../stylesheets/noscript.css">
+    </noscript>
 </head>
 
 <body>
@@ -35,6 +40,7 @@
 <!-- Page content -->
 <div class="main-content">
     <h1 class="page-title">Photo Competition</h1>
+    <h1 class="noscript" style="display: none">You must enable JavaScript to use this.</h1>
 
     <div class="image-container">
         <!-- src and alt attribute will be populated by index.js on page load -->
@@ -42,7 +48,7 @@
     </div>
 
     <div class="voting-buttons">
-        <button id="voteUp" class="voting-button vote-up">hey that's pretty good</button>
+        <button id="voteUp" class="voting-button vote-up">I love it</button>
         <button id="voteDown" class="voting-button vote-down">I hate it</button>
     </div>
 
