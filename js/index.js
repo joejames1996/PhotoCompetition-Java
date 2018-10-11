@@ -68,11 +68,15 @@ $(function () {
 
     $("button.vote-up").click(function()
     {
-        if(id != -1) voteUp(id);
+        if(id != -1) {
+            voteUp(id);
+        }
     });
 
     $("button.vote-down").click(function()
     {
-        if(id != -1) voteDown(id);
+        if(id != -1) {
+            voteDown(id);
+        }
     });
 });
