@@ -14,8 +14,6 @@ $(function () {
     	var name = $('input#uploadName').val();
     	var license = $('input#uploadLicense').val();
 
-    	console.log(author, name, license);
-
     	formData.append('metadata', new Blob([JSON.stringify({
     		'author' : author,
     		'name' : name,
@@ -26,7 +24,7 @@ $(function () {
 
     	formData.append('rawdata', fileField.files[0]);
 
-    	fetch(buildUrl('/'),
+    	fetch(buildUrl(''),
     	{
     		method: 'POST',
     		body: formData
