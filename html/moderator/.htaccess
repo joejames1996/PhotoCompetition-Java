@@ -1,0 +1,4 @@
+ AuthType Basic
+ AuthName "Photo Competition Moderator"
+ AuthUserFile "C:/xampp/htdocs/photocompetition/html/moderator/.htpasswd"
+ Require user moderator
