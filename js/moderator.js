@@ -24,19 +24,19 @@ function loadAllImages()
         		'<tbody>' +
             	'<tr>' +
                 '<td><b>Author</b></td>' +
-                '<td id="picAuthor"></td>' +
+                '<td id="picAuthor">' + item.author + '</td>' +
             	'</tr>' +
             	'<tr>' +
                 '<td><b>Name</b></td>' +
-                '<td id="picName"></td>' +
+                '<td id="picName">' + item.name + '</td>' +
             	'</tr>' +
             	'<tr>' +
                 '<td><b>Score</b></td>' +
-                '<td id="picScore"></td>' +
+                '<td id="picScore">' + item.score + '</td>' +
             	'</tr>' +
             	'<tr>' +
                 '<td><b>Licence</b></td>' +
-                '<td id="picLicense"></td>' +
+                '<td id="picLicense">' + item.license + '</td>' +
             	'</tr>' +
         		'</tbody>' +
     			'</table>' +
