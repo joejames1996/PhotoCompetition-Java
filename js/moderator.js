@@ -39,12 +39,51 @@ function loadAllImages()
                 '<td id="picLicense"></td>' +
             	'</tr>' +
         		'</tbody>' +
-    			'</table>');
+    			'</table>' +
+    			'<div class="voting-buttons">' +
+    			'<button id="' + item.id + '" class="delete-button voting-button vote-down">Delete Photo</button>' +
+    			'</div>' +
+    			'<hr>');
+
+    		$("button#" + item.id).click(function()
+    		{
+    			deletePhoto(item.id);
+    		});
     	});
     })
     .catch(function (err) {
         console.error('Request to /random failed: ', err);
     });
+}
+
+function deletePhoto(id)
+{
+	console.log('delete photo ' + id);
+
+	var header = new Headers({
+		"Authorization": "Basic " + window.btoa(username + ":" + password)
+	});
+
+	fetch(buildUrl('/id/' + id),
+	{
+		method: 'DELETE',
+		headers: header
+	})
+	.then(function(response)
+	{
+		if (response.status !== 204)
+        {
+            throw new Error('Request return status code !== 204: ' + response.status + ' - ');
+        }
+	})
+	.then(function()
+	{
+		$(location).attr('href', 'moderator.html');
+	})
+	.catch(function(err)
+	{
+		console.error('Failed to delete photo ' + id + ': ', err);
+	});
 }
 
 $(function ()
